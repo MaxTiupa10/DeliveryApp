@@ -11,6 +11,9 @@
   <packaging>pom</packaging>
   <modules>
     <module>discovery-server</module>
+    <module>user-service</module>
+    <module>order-service</module>
+    <module>restaurant-service</module>
   </modules>
 
   <properties>
