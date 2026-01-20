@@ -1,52 +1,38 @@
 package com.example.userservice.Service;
 
-
+import com.example.userservice.DTO.UserProfileResponse;
 import com.example.userservice.Entity.User;
-import com.example.userservice.Repisitory.UserRepository;
+import com.example.userservice.Repository.UserRepository;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import java.util.UUID;
-
 @Service
-public class UserService {
+public class UserService implements UserDetailsService {
+
     private final UserRepository userRepository;
-    private final EmailService emailService;
-    public UserService(UserRepository userRepository,EmailService emailService) {
+
+    public UserService(UserRepository userRepository) {
         this.userRepository = userRepository;
-        this.emailService = emailService;
     }
-
-    public User registerUser(User user) {
-        if (userRepository.findByEmail(user.getEmail()) != null) {
-            throw new RuntimeException("Пошта вже зайнята");
-        }
-        String code = UUID.randomUUID().toString();
-        user.setVerificationCode(code);
-        user.setEnabled(false);
-
-        User savedUser = userRepository.save(user);
-
-        emailService.sendVerificationEmail(user.getEmail(), code);
-
-        return savedUser;
+    @Override
+    public UserDetails loadUserByUsername(String email) throws UsernameNotFoundException {
+        return userRepository.findByEmail(email)
+                .orElseThrow(() -> new UsernameNotFoundException("User not found with email: " + email));
     }
+    public UserProfileResponse getUserProfile(String email) {
+        User user = userRepository.findByEmail(email)
+                .orElseThrow(() -> new RuntimeException("Користувача не знайдено")); // Тут спрацює GlobalExceptionHandler -> 400
 
-
-    public boolean verifyUser(String verificationCode) {
-        // 1. Шукаємо юзера по коду
-        User user = userRepository.findByVerificationCode(verificationCode)
-                .orElse(null);
-
-        // 2. Якщо юзера немає або він вже активований — повертаємо false
-        if (user == null || user.isEnabled()) {
-            return false;
-        }
-
-        // 3. Активуємо юзера
-        user.setEnabled(true);
-        user.setVerificationCode(null); // Очищаємо код, щоб його не можна було використати вдруге
-        userRepository.save(user); // Зберігаємо зміни в базу
-
-        return true;
+        return new UserProfileResponse(
+                user.getId(),
+                user.getEmail(),
+                user.getFirstName(),
+                user.getLastName(),
+                user.getPhoneNumber(), // Передаємо телефон
+                user.getAddress(),     // Передаємо адресу
+                user.getRole()
+        );
     }
 }

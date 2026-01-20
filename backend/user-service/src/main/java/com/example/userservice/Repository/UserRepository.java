@@ -1,4 +1,4 @@
-package com.example.userservice.Repisitory;
+package com.example.userservice.Repository;
 
 
 import com.example.userservice.Entity.User;
@@ -9,6 +9,7 @@ import java.util.Optional;
 
 @Repository
 public interface UserRepository extends JpaRepository<User,Long> {
-    User findByEmail(String email);
+    Optional<User> findByEmail(String email);
     Optional<User> findByVerificationCode(String verificationCode);
+    Optional<User> findByResetPasswordToken(String resetPasswordToken);
 }

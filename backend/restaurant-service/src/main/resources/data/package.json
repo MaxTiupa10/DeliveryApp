@@ -1,0 +1,136 @@
+[
+  {
+    "name": "Реберня під Арсеналом",
+    "description": "Культове місце у Львові. Тут їдять руками, а ребра рубають сокирою прямо при тобі.",
+    "address": "вул. Підвальна, 5, Львів",
+    "phoneNumber": "+380679998877",
+    "ownerId": 1,
+    "isOpen": true,
+    "menuItems": [
+      {
+        "name": "Ребра на вогні (400г)",
+        "description": "Фірмові свинячі ребра у медовому маринаді.",
+        "price": 290.00,
+        "available": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/BBQ_Pork_Ribs.jpg/800px-BBQ_Pork_Ribs.jpg"
+      },
+      {
+        "name": "Картопля на вогні з салом",
+        "description": "Запечена картопля з шматочками сала та часником.",
+        "price": 95.00,
+        "available": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Baked_potato_with_bacon.jpg/800px-Baked_potato_with_bacon.jpg"
+      },
+      {
+        "name": "Скумбрія на грилі",
+        "description": "Ціла скумбрія, смажена на відкритому вогні.",
+        "price": 210.00,
+        "available": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Grilled_mackerel.jpg/800px-Grilled_mackerel.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Lviv Croissants",
+    "description": "Львівські круасани великого розміру з різноманітними начинками.",
+    "address": "проспект Свободи, 10, Львів",
+    "phoneNumber": "+380931112233",
+    "ownerId": 1,
+    "isOpen": true,
+    "menuItems": [
+      {
+        "name": "Круасан 'Львівський'",
+        "description": "Салямі, яєчня, салат, помідор, соус.",
+        "price": 85.00,
+        "available": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Croissant_sandwich.jpg/800px-Croissant_sandwich.jpg"
+      },
+      {
+        "name": "Круасан з куркою пак-чой",
+        "description": "Курка гриль, капуста пак-чой, соус теріякі.",
+        "price": 98.00,
+        "available": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Chicken_sandwich.jpg/800px-Chicken_sandwich.jpg"
+      },
+      {
+        "name": "Круасан 'Малина-Маскарпоне'",
+        "description": "Солодкий круасан з малиновим джемом та сиром маскарпоне.",
+        "price": 75.00,
+        "available": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Croissant_with_jam.jpg/800px-Croissant_with_jam.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Sushi Master",
+    "description": "Японська кухня, роли, суші-сети та вок.",
+    "address": "вул. Зелена, 147, Львів",
+    "phoneNumber": "+380800333222",
+    "ownerId": 1,
+    "isOpen": true,
+    "menuItems": [
+      {
+        "name": "Сет 'Філадельфія'",
+        "description": "Класичні роли Філадельфія з лососем (32 шматочки).",
+        "price": 550.00,
+        "available": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Sushi_platter.jpg/800px-Sushi_platter.jpg"
+      },
+      {
+        "name": "Рол 'Золотий Дракон'",
+        "description": "Вугор, авокадо, рис, норі, соус унагі.",
+        "price": 240.00,
+        "available": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Dragon_Roll.jpg/800px-Dragon_Roll.jpg"
+      }
+    ]
+  },
+  {
+    "name": "П'яна Вишня",
+    "description": "Найкраща львівська настоянка. Ліпше один раз спробувати, ніж сто раз почути.",
+    "address": "площа Ринок, 11, Львів",
+    "phoneNumber": "+380671234567",
+    "ownerId": 1,
+    "isOpen": true,
+    "menuItems": [
+      {
+        "name": "Вишнівка (100мл)",
+        "description": "Фірмова настоянка з відбірних вишень.",
+        "price": 65.00,
+        "available": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Cherry_liqueur.jpg/800px-Cherry_liqueur.jpg"
+      },
+      {
+        "name": "Чоколядовий торт",
+        "description": "Ніжний бісквіт з вишневим прошарком.",
+        "price": 120.00,
+        "available": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/86/Chocolate_cake.jpg/800px-Chocolate_cake.jpg"
+      }
+    ]
+  },
+  {
+    "name": "Burger King",
+    "description": "Дім Воппера. Смачні бургери, приготовані на вогні.",
+    "address": "ТЦ Victoria Gardens, Львів",
+    "phoneNumber": "+380441234567",
+    "ownerId": 1,
+    "isOpen": true,
+    "menuItems": [
+      {
+        "name": "Воппер",
+        "description": "Легендарний бургер з яловичою котлетою на грилі.",
+        "price": 145.00,
+        "available": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Whopper_burger.jpg/800px-Whopper_burger.jpg"
+      },
+      {
+        "name": "Кінг Фрі (Велика)",
+        "description": "Золотиста картопля фрі.",
+        "price": 60.00,
+        "available": true,
+        "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/French_Fries.JPG/800px-French_Fries.JPG"
+      }
+    ]
+  }
+]
